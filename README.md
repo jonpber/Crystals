@@ -1,2 +1,2 @@
 # crystals
-A 
+A fun, interactive jQuery game.
