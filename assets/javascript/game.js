@@ -4,6 +4,7 @@ var $numToGuess = $("#numToGuess");
 var numToGuessVal = 0;
 var $gameText = $(".gameText");
 var crystals = [crystal0, crystal1, crystal2, crystal3];
+var gameOver = false;
 
 
 $(function(){
@@ -20,17 +21,35 @@ $(function(){
 	onStart();
 
 	function valCheck(){
-		if (yourGuessVal === numToGuessVal){
+		if (yourGuessVal === numToGuessVal && !gameOver){
 			$(".crystals").fadeOut("fast", function(){
-				$(".crystals").empty();
+				gameOver = true;
+				var $restartButton = $("<button>");
+				$restartButton.text("Restart").on("click", function(){
+					location.reload();
+				});
+
+				$(".crystals").empty().append($restartButton).show();
+
+
 			})
 
 			$gameText.text("You win.");
+
+
 		}
 
-		else if (yourGuessVal > numToGuessVal){
+		else if (yourGuessVal > numToGuessVal && !gameOver){
 			$(".crystals").fadeOut("fast", function(){
-				$(".crystals").empty();
+				gameOver = true;
+				var $restartButton = $("<button>");
+				$restartButton.text("Restart").on("click", function(){
+					location.reload();
+				});
+
+				$(".crystals").empty().append($restartButton).show();
+
+
 			})
 			$gameText.text ("You lose.");
 		}
