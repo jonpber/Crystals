@@ -68,6 +68,10 @@ button {
 	font-size: 40px;
 }
 
+.marg {
+	margin-top: -20px;
+}
+
 @media screen and (max-width: 992px){
 	.crystal {
 		width: 100px;
@@ -78,9 +82,22 @@ button {
 	.crystalBox {
 		height: 200px;
 	}
+
 }
 
-.marg {
-	margin-top: -20px;
+@media screen and (max-width: 600px){
+	h1 {
+		font-size: 26px;
+	}
+	.crystal {
+		width: 18%;
+		height: auto;
+		margin-top: 25px;
+	}
+
+	p {
+		font-size: 16px;
+	    padding: 0 25px;
+	}
 }
 
