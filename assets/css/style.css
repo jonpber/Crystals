@@ -99,5 +99,17 @@ button {
 		font-size: 16px;
 	    padding: 0 25px;
 	}
+
+	.gameManager, .title, .crystalBox, .tutorial {
+		margin-bottom: 10%;
+	}
+
+	#chestBack {
+		height: 150px;
+	}
+
+	.crystalBox {
+		height: 150px;
+	}
 }
 

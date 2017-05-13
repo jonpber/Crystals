@@ -5,6 +5,9 @@ var numToGuessVal = 0;
 var $gameText = $(".gameText");
 var crystals = [crystal0, crystal1, crystal2, crystal3];
 var gameOver = false;
+var crystalAudio2 = new Audio ("assets/sounds/crystal02.wav");
+var crystalAudio3 = new Audio ("assets/sounds/crystal03.wav");
+
 
 
 $(function(){
@@ -58,6 +61,8 @@ $(function(){
 	$("#crystal0").on("click", function(){
 		yourGuessVal += crystals[0];
 		$yourGuess.text(yourGuessVal);
+		crystalAudio3.currentTime = 0;
+		crystalAudio3.play();
 
 		valCheck();
 	});
@@ -65,6 +70,9 @@ $(function(){
 	$("#crystal1").on("click", function(){
 		yourGuessVal += crystals[1];
 		$yourGuess.text(yourGuessVal);
+		crystalAudio2.currentTime = 0;
+		crystalAudio2.play();
+
 
 		valCheck();
 	});
@@ -72,6 +80,9 @@ $(function(){
 	$("#crystal2").on("click", function(){
 		yourGuessVal += crystals[2];
 		$yourGuess.text(yourGuessVal);
+		crystalAudio3.play();
+		crystalAudio3.currentTime = 0;
+		crystalAudio3.play();
 
 		valCheck();
 	});
@@ -79,6 +90,8 @@ $(function(){
 	$("#crystal3").on("click", function(){
 		yourGuessVal += crystals[3];
 		$yourGuess.text(yourGuessVal);
+		crystalAudio2.currentTime = 0;
+		crystalAudio2.play();
 
 		valCheck();
 	});
