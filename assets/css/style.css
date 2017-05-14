@@ -52,7 +52,7 @@ h1 {
 	top: 0;
 }
 
-#chestBack {
+.chestBack {
 	position: absolute;
 	height: 200px;
 	width: 80%;
@@ -70,6 +70,11 @@ button {
 
 .marg {
 	margin-top: -20px;
+}
+
+.gameText {
+	width: 70%;
+	margin: auto;
 }
 
 @media screen and (max-width: 992px){
@@ -104,12 +109,21 @@ button {
 		margin-bottom: 10%;
 	}
 
-	#chestBack {
+	.chestBack {
 		height: 150px;
 	}
 
 	.crystalBox {
 		height: 150px;
+	}
+
+	.gameText {
+		font-size: 15px;
+		padding: 0;
+	}
+
+	.tutorial > .chestBack {
+		height: 250px;
 	}
 }
 
