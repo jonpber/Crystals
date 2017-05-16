@@ -53,7 +53,7 @@ $(function(){
 
 
 			})
-			$gameText.text ("Thou has lost.");
+			$gameText.text ("Thou hath lost.");
 		}
 	}
 
