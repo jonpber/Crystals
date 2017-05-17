@@ -1,15 +1,13 @@
-var $yourGuess = $("#guess");
-var yourGuessVal = 0;
-var $numToGuess = $("#numToGuess");
-var numToGuessVal = 0;
-var $gameText = $(".gameText");
-var crystals = [crystal0, crystal1, crystal2, crystal3];
-var gameOver = false;
-var crystalAudio = new Audio ("assets/sounds/gem.wav");
-
-
-
 $(function(){
+	var $yourGuess = $("#guess");
+	var yourGuessVal = 0;
+	var $numToGuess = $("#numToGuess");
+	var numToGuessVal = 0;
+	var $gameText = $(".gameText");
+	var crystals = [crystal0, crystal1, crystal2, crystal3];
+	var gameOver = false;
+	var crystalAudio = new Audio ("assets/sounds/gem.wav");
+		
 	function onStart(){
 		//sets number to guess between 19 and 120
 		numToGuessVal = Math.floor((Math.random() * 101) + 19);
