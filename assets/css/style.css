@@ -6,6 +6,7 @@ body {
 	background-image: url("../images/back1.png");
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-color: #000212;
 }
 
 h1, p {
@@ -91,6 +92,12 @@ button {
 
 }
 
+@media screen and (max-width: 650px){
+	body {
+		background-size: inherit;
+	}
+}
+
 @media screen and (max-width: 600px){
 	h1 {
 		font-size: 26px;
@@ -126,5 +133,6 @@ button {
 	.tutorial > .chestBack {
 		height: 250px;
 	}
+
 }
 
