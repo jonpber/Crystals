@@ -4,6 +4,7 @@ $(function(){
 	var $numToGuess = $("#numToGuess");
 	var numToGuessVal = 0;
 	var $gameText = $(".gameText");
+	var crystal0, crystal1, crystal2, crystal3;
 	var crystals = [crystal0, crystal1, crystal2, crystal3];
 	var gameOver = false;
 	var crystalAudio = new Audio ("assets/sounds/gem.wav");
@@ -30,8 +31,6 @@ $(function(){
 				});
 
 				$(".crystals").empty().append($restartButton).show();
-
-
 			})
 
 			$gameText.text("Thou hath won.");
@@ -55,36 +54,8 @@ $(function(){
 		}
 	}
 
-	$("#crystal0").on("click", function(){
-		yourGuessVal += crystals[0];
-		$yourGuess.text(yourGuessVal);
-		// crystalAudio.currentTime = 0;
-		crystalAudio.play();
-
-		valCheck();
-	});
-
-	$("#crystal1").on("click", function(){
-		yourGuessVal += crystals[1];
-		$yourGuess.text(yourGuessVal);
-		// crystalAudio.currentTime = 0;
-		crystalAudio.play();
-
-
-		valCheck();
-	});
-
-	$("#crystal2").on("click", function(){
-		yourGuessVal += crystals[2];
-		$yourGuess.text(yourGuessVal);
-		// crystalAudio.currentTime = 0;
-		crystalAudio.play();
-
-		valCheck();
-	});
-
-	$("#crystal3").on("click", function(){
-		yourGuessVal += crystals[3];
+	$(".crystal").on("click", function(){
+		yourGuessVal += crystals[$(this).attr("data-num")];
 		$yourGuess.text(yourGuessVal);
 		// crystalAudio.currentTime = 0;
 		crystalAudio.play();
