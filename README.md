@@ -1,3 +1,5 @@
+![Crystals](https://i.imgur.com/uZhvvpc.gif)
+
 # Crystals
 A fun, interactive jQuery game.
 
